@@ -1,5 +1,9 @@
 module SnapshotTesting
 
-# Write your package code here.
+import DeepDiffs
+
+using Test
+
+include("snapshots.jl")
 
 end

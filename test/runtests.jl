@@ -2,5 +2,7 @@ using SnapshotTesting
 using Test
 
 @testset "SnapshotTesting.jl" begin
-    # Write your tests here.
+    @testset "snapshots" begin
+        include("snapshots.jl")
+    end
 end

@@ -16,7 +16,12 @@ function create_expectation_snapshot(func, expected_dir, subpath)
     func(snapshot_dir)
 end
 
-function test_snapshot(func, expected_dir, subpath; allow_additions = true)
+function test_snapshot(func, expected_dir, subpath; allow_additions = true, regenerate = false)
+    if regenerate
+        create_expectation_snapshot(func, expected_dir, subpath)
+        return nothing
+    end
+
     output_path = mktempdir()
     snapshot_dir = joinpath(output_path, subpath)
 

@@ -62,6 +62,7 @@ function _recursive_diff_dirs(expected_dir, new_dir; allow_additions)
                 new_content = read(new_path, String)
                 @test new_content == expected_content
                 if new_content != expected_content
+                    println("Found non-matching content in `$file`.")
                     display(DeepDiffs.deepdiff(expected_content, new_content))
                 end
             end

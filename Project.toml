@@ -1,7 +1,7 @@
 name = "SnapshotTesting"
 uuid = "cf213a48-8697-4c15-82cb-081f2086cf9e"
 authors = ["Nathan Daly <nhdaly@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 DeepDiffs = "ab62b9b5-e342-54a8-a765-a90f495de1a6"
